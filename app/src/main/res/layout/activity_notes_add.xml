@@ -6,5 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".activitys.main.NotesAddActivity">
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:backgroundTint="#c9f698"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_done"
+                android:layout_width="@dimen/margin_padding_30dp"
+                android:layout_height="@dimen/margin_padding_30dp"
+                android:layout_marginRight="@dimen/padding_magin_20dp"
+                android:background="#f2e8ff"
+                android:backgroundTint="#c9f698"
+                android:src="@drawable/ic_baseline_done_24"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <EditText
+                android:id="@+id/text_notes_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_magin_20dp"
+                android:backgroundTint="#c9f698"
+                android:hint="@string/no_title"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_done"
+                app:layout_constraintStart_toEndOf="@+id/btn_close"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="@dimen/margin_padding_30dp"
+                android:layout_height="@dimen/margin_padding_30dp"
+                android:layout_marginStart="@dimen/padding_magin_20dp"
+                android:backgroundTint="#c9f698"
+                android:src="@drawable/ic_baseline_close_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/text_notes"
+        android:layout_width="match_parent"
+        android:hint="No content"
+        android:gravity="start"
+        android:inputType="textCapSentences"
+        android:padding="@dimen/padding_magin_20dp"
+        android:layout_height="@dimen/margin_padding_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
